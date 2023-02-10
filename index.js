@@ -5,7 +5,7 @@ const https = require("https");
 const target = "https://javplayer.me/"
 
 const app = express()
-const port = 5000
+const port = process.env.PORT || 3000
 
 const getHtml = async (slug) => {
     return await axios.get(target + "v/" + slug, {
